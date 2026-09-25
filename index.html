@@ -5,14 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>hair salon MOKU | 表参道の美容室</title>
   <meta name="description" content="表参道駅から徒歩3分のヘアサロン MOKU。髪にやさしい薬剤と丁寧なカウンセリングで、あなたらしいスタイルを提案します。">
+  <meta property="og:title" content="hair salon MOKU | 表参道の美容室">
+  <meta property="og:description" content="いつもの毎日に、ちょっとだけ特別な髪を。表参道駅から徒歩3分のヘアサロン。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero.svg">
+  <meta name="theme-color" content="#a8826a">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="header" id="top">
+  <!-- ローディング -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <p class="loader__logo"><span>M</span><span>O</span><span>K</span><span>U</span></p>
+    <p class="loader__sub">hair salon</p>
+  </div>
+
+  <div class="progress" id="progress"></div>
+
+  <header class="header" id="header">
     <div class="header__inner">
       <a href="#top" class="logo">MOKU<span>hair salon</span></a>
       <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
@@ -23,39 +37,100 @@
         <a href="#menu">Menu</a>
         <a href="#staff">Staff</a>
         <a href="#gallery">Style</a>
+        <a href="#voice">Voice</a>
         <a href="#access">Access</a>
         <a href="#reserve" class="nav__btn">ご予約</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <!-- ヒーロー -->
     <section class="hero">
+      <p class="hero__vertical">表参道 ― since 2016</p>
       <div class="hero__text">
         <p class="hero__sub">Omotesando / Hair Salon</p>
-        <h1>いつもの毎日に、<br>ちょっとだけ特別な髪を。</h1>
+        <h1 class="hero__title">
+          <span class="line"><span>いつもの毎日に、</span></span>
+          <span class="line"><span>ちょっとだけ</span></span>
+          <span class="line"><span>特別な髪を。</span></span>
+        </h1>
         <p class="hero__lead">表参道駅から徒歩3分。木のぬくもりを感じる空間で、<br class="pc">あなたに似合うスタイルを一緒に見つけます。</p>
-        <a href="#reserve" class="btn">ネット予約はこちら</a>
+        <div class="hero__btns">
+          <a href="#reserve" class="btn">ネット予約はこちら <span class="btn__arrow">→</span></a>
+          <p class="hero__status"><span class="status-dot" id="status-dot"></span><span id="status-text">営業時間を確認中…</span></p>
+        </div>
       </div>
+      <div class="hero__visual">
+        <div class="hero__main"><img src="images/hero.svg" alt="MOKUのイメージイラスト"></div>
+        <div class="hero__sub-img"><img src="images/style2.svg" alt=""></div>
+        <a href="#reserve" class="badge" aria-label="予約する">
+          <svg viewBox="0 0 120 120">
+            <defs><path id="circle" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+            <text><textPath href="#circle" textLength="272" lengthAdjust="spacing">RESERVE NOW ・ MOKU HAIR SALON ・</textPath></text>
+          </svg>
+          <span>予約</span>
+        </a>
+      </div>
+      <a href="#news" class="scroll">Scroll</a>
+    </section>
+
+    <!-- 流れる文字 -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__inner">
+        <span>Natural</span><span>・</span><span>Beautiful</span><span>・</span><span>Your Style</span><span>・</span><span>MOKU hair salon</span><span>・</span>
+        <span>Natural</span><span>・</span><span>Beautiful</span><span>・</span><span>Your Style</span><span>・</span><span>MOKU hair salon</span><span>・</span>
+      </div>
+    </div>
+
+    <!-- お知らせ -->
+    <section class="news reveal" id="news">
+      <h2 class="news__title">News</h2>
+      <ul class="news__list">
+        <li><time datetime="2026-09-20">2026.09.20</time><span class="tag">Campaign</span><p>秋の髪質改善キャンペーン、10月末まで延長します！</p></li>
+        <li><time datetime="2026-09-05">2026.09.05</time><span class="tag">Info</span><p>10月の休業日のお知らせ(10/14は研修のためお休みです)</p></li>
+        <li><time datetime="2026-08-18">2026.08.18</time><span class="tag">Staff</span><p>スタイリスト中村がメンズパーマのコンテストで入賞しました</p></li>
+      </ul>
     </section>
 
     <!-- コンセプト -->
-    <section class="section concept" id="concept">
-      <h2 class="section__title">Concept<span>コンセプト</span></h2>
+    <section class="section" id="concept">
+      <div class="section__head reveal">
+        <p class="section__num">01</p>
+        <h2 class="section__title">Concept<span>コンセプト</span></h2>
+        <p class="section__bg">CONCEPT</p>
+      </div>
+      <div class="about reveal">
+        <div class="about__img"><img src="images/salon.svg" alt="店内のイラスト"></div>
+        <div class="about__text">
+          <h3>「また来たい」って<br>思ってもらえる場所に。</h3>
+          <p>MOKUは、木(もく)のようにゆっくりと、お客さまと長く付き合っていけるサロンでありたいという思いから名付けました。</p>
+          <p>店内は4席だけの小さなお店です。そのぶん、一人ひとりの髪としっかり向き合う時間をつくっています。</p>
+          <p class="about__sign">Owner 佐藤 ゆうき</p>
+        </div>
+      </div>
       <div class="concept__grid">
-        <div class="concept__item">
-          <p class="concept__num">01</p>
+        <div class="concept__item reveal">
+          <div class="concept__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h32v20H22l-8 7v-7H8z"/><path d="M16 20h16M16 25h10"/></svg>
+          </div>
+          <p class="concept__num">Point 01</p>
           <h3>しっかりカウンセリング</h3>
           <p>髪質やクセ、普段のスタイリング方法まで聞いてから施術に入ります。「なんとなく」で終わらせません。</p>
         </div>
-        <div class="concept__item">
-          <p class="concept__num">02</p>
+        <div class="concept__item reveal">
+          <div class="concept__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 38C10 20 22 10 38 10c0 16-10 28-28 28z"/><path d="M10 38L28 20"/></svg>
+          </div>
+          <p class="concept__num">Point 02</p>
           <h3>髪にやさしい薬剤</h3>
           <p>ダメージを抑えたカラー剤やオーガニック系のトリートメントを使用。くり返し染める方でも安心です。</p>
         </div>
-        <div class="concept__item">
-          <p class="concept__num">03</p>
+        <div class="concept__item reveal">
+          <div class="concept__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22L24 9l16 13"/><path d="M12 19v19h24V19"/><path d="M20 38V28h8v10"/></svg>
+          </div>
+          <p class="concept__num">Point 03</p>
           <h3>おうちでも再現できる</h3>
           <p>サロン帰りだけキレイ、じゃなくて、次の日も自分でセットしやすいカットを心がけています。</p>
         </div>
@@ -63,91 +138,259 @@
     </section>
 
     <!-- メニュー -->
-    <section class="section menu" id="menu">
-      <h2 class="section__title">Menu<span>メニュー・料金</span></h2>
-      <div class="menu__wrap">
-        <div class="menu__col">
-          <h3>Cut</h3>
+    <section class="section section--tint" id="menu">
+      <div class="section__head reveal">
+        <p class="section__num">02</p>
+        <h2 class="section__title">Menu<span>メニュー・料金</span></h2>
+        <p class="section__bg">MENU</p>
+      </div>
+
+      <div class="coupon reveal">
+        <div class="coupon__card coupon__card--main">
+          <p class="coupon__label">人気No.1</p>
+          <h3>カット＋透明感カラー＋トリートメント</h3>
+          <p class="coupon__price"><s>¥16,500</s> ¥13,200</p>
+          <p class="coupon__note">初回の方限定 / 所要時間 約2時間半</p>
+        </div>
+        <div class="coupon__card">
+          <p class="coupon__label">学生さん</p>
+          <h3>学割カット＋ヘッドスパ</h3>
+          <p class="coupon__price"><s>¥7,700</s> ¥6,050</p>
+          <p class="coupon__note">学生証をご提示ください</p>
+        </div>
+      </div>
+
+      <div class="menu reveal">
+        <div class="menu__tabs" role="tablist">
+          <button class="menu__tab is-active" role="tab" aria-selected="true" data-tab="cut">Cut</button>
+          <button class="menu__tab" role="tab" aria-selected="false" data-tab="color">Color</button>
+          <button class="menu__tab" role="tab" aria-selected="false" data-tab="perm">Perm</button>
+          <button class="menu__tab" role="tab" aria-selected="false" data-tab="care">Care</button>
+        </div>
+        <div class="menu__panel is-active" data-panel="cut" role="tabpanel">
           <dl>
-            <div><dt>カット(シャンプー・ブロー込み)</dt><dd>¥6,050</dd></div>
-            <div><dt>前髪カット</dt><dd>¥1,100</dd></div>
-            <div><dt>学生カット</dt><dd>¥4,400</dd></div>
-          </dl>
-          <h3>Color</h3>
-          <dl>
-            <div><dt>カット＋カラー</dt><dd>¥11,000〜</dd></div>
-            <div><dt>リタッチカラー</dt><dd>¥5,500〜</dd></div>
-            <div><dt>ダブルカラー</dt><dd>¥15,400〜</dd></div>
+            <div><dt>カット<small>シャンプー・ブロー込み</small></dt><dd>¥6,050</dd></div>
+            <div><dt>前髪カット<small>10分ほどで終わります</small></dt><dd>¥1,100</dd></div>
+            <div><dt>学生カット<small>高校生・大学生・専門学生</small></dt><dd>¥4,400</dd></div>
+            <div><dt>キッズカット<small>小学生まで</small></dt><dd>¥3,300</dd></div>
           </dl>
         </div>
-        <div class="menu__col">
-          <h3>Perm / Straight</h3>
+        <div class="menu__panel" data-panel="color" role="tabpanel">
           <dl>
-            <div><dt>カット＋デジタルパーマ</dt><dd>¥14,300〜</dd></div>
-            <div><dt>カット＋縮毛矯正</dt><dd>¥17,600〜</dd></div>
+            <div><dt>カット＋カラー<small>透明感カラーも同じ料金です</small></dt><dd>¥11,000〜</dd></div>
+            <div><dt>リタッチカラー<small>根元2cmまで</small></dt><dd>¥5,500〜</dd></div>
+            <div><dt>ダブルカラー<small>ブリーチ1回＋オンカラー</small></dt><dd>¥15,400〜</dd></div>
+            <div><dt>インナーカラー<small>顔まわり・耳かけ部分など</small></dt><dd>¥6,600〜</dd></div>
           </dl>
-          <h3>Care</h3>
-          <dl>
-            <div><dt>髪質改善トリートメント</dt><dd>¥5,500</dd></div>
-            <div><dt>ヘッドスパ(20分)</dt><dd>¥3,300</dd></div>
-          </dl>
-          <p class="menu__note">※表示価格はすべて税込です。<br>※髪の長さや量によって追加料金がかかる場合があります。</p>
         </div>
+        <div class="menu__panel" data-panel="perm" role="tabpanel">
+          <dl>
+            <div><dt>カット＋パーマ<small>ゆるめ〜しっかりまで対応</small></dt><dd>¥12,100〜</dd></div>
+            <div><dt>カット＋デジタルパーマ<small>乾かすだけでカールが出ます</small></dt><dd>¥14,300〜</dd></div>
+            <div><dt>カット＋縮毛矯正<small>自然なストレートに仕上げます</small></dt><dd>¥17,600〜</dd></div>
+            <div><dt>メンズツイストパーマ<small>カット込み</small></dt><dd>¥13,200</dd></div>
+          </dl>
+        </div>
+        <div class="menu__panel" data-panel="care" role="tabpanel">
+          <dl>
+            <div><dt>髪質改善トリートメント<small>ツヤとまとまりが続きます</small></dt><dd>¥5,500</dd></div>
+            <div><dt>ヘッドスパ 20分<small>炭酸泉つき</small></dt><dd>¥3,300</dd></div>
+            <div><dt>ヘッドスパ 40分<small>肩・首のマッサージつき</small></dt><dd>¥5,500</dd></div>
+          </dl>
+        </div>
+        <p class="menu__note">※表示価格はすべて税込です。※髪の長さや量によって追加料金がかかる場合があります。</p>
       </div>
     </section>
 
+    <!-- 来店の流れ -->
+    <section class="section" id="flow">
+      <div class="section__head reveal">
+        <p class="section__num">03</p>
+        <h2 class="section__title">Flow<span>ご来店の流れ</span></h2>
+        <p class="section__bg">FLOW</p>
+      </div>
+      <ol class="flow">
+        <li class="reveal"><span class="flow__step">Step 1</span><h3>ご予約</h3><p>ネットかお電話でどうぞ。24時間ネット予約OKです。</p></li>
+        <li class="reveal"><span class="flow__step">Step 2</span><h3>カウンセリング</h3><p>なりたいイメージの写真があれば見せてください。</p></li>
+        <li class="reveal"><span class="flow__step">Step 3</span><h3>施術</h3><p>途中で気になることがあれば気軽に言ってください。</p></li>
+        <li class="reveal"><span class="flow__step">Step 4</span><h3>アフターケア</h3><p>おうちでのセット方法やおすすめのケアをお伝えします。</p></li>
+      </ol>
+    </section>
+
     <!-- スタッフ -->
-    <section class="section staff" id="staff">
-      <h2 class="section__title">Staff<span>スタッフ</span></h2>
+    <section class="section section--tint" id="staff">
+      <div class="section__head reveal">
+        <p class="section__num">04</p>
+        <h2 class="section__title">Staff<span>スタッフ</span></h2>
+        <p class="section__bg">STAFF</p>
+      </div>
       <div class="staff__grid">
-        <div class="staff__card">
-          <img class="staff__img" src="images/staff1.svg" alt="佐藤 ゆうき">
+        <article class="staff__card reveal">
+          <div class="staff__photo">
+            <img src="images/staff1.svg" alt="佐藤 ゆうき">
+            <div class="staff__more">
+              <p><b>得意</b>ショート・ボブ・丸みシルエット</p>
+              <p><b>資格</b>美容師免許 / ケアリスト</p>
+              <p><b>ひとこと</b>髪の悩み、なんでも相談してください！</p>
+            </div>
+          </div>
           <p class="staff__role">Owner / Stylist</p>
-          <h3>佐藤 ゆうき</h3>
+          <h3>佐藤 ゆうき<span>Yuki Sato</span></h3>
           <p>ショートとボブが得意。ふんわり見える丸みのあるシルエットが好きです。</p>
           <p class="staff__meta">歴15年 / 休日はカフェめぐり</p>
-        </div>
-        <div class="staff__card">
-          <img class="staff__img" src="images/staff2.svg" alt="高橋 みお">
+        </article>
+        <article class="staff__card reveal">
+          <div class="staff__photo">
+            <img src="images/staff2.svg" alt="高橋 みお">
+            <div class="staff__more">
+              <p><b>得意</b>透明感カラー・インナーカラー</p>
+              <p><b>資格</b>美容師免許 / カラーリスト</p>
+              <p><b>ひとこと</b>ブリーチなしでもかわいい色、いっぱいあります。</p>
+            </div>
+          </div>
           <p class="staff__role">Stylist</p>
-          <h3>高橋 みお</h3>
+          <h3>高橋 みお<span>Mio Takahashi</span></h3>
           <p>透明感カラーならおまかせください。ブリーチなしで叶う色も提案します。</p>
           <p class="staff__meta">歴8年 / 最近はサウナにハマり中</p>
-        </div>
-        <div class="staff__card">
-          <img class="staff__img" src="images/staff3.svg" alt="中村 はると">
+        </article>
+        <article class="staff__card reveal">
+          <div class="staff__photo">
+            <img src="images/staff3.svg" alt="中村 はると">
+            <div class="staff__more">
+              <p><b>得意</b>メンズカット・ツイストパーマ</p>
+              <p><b>資格</b>美容師免許</p>
+              <p><b>ひとこと</b>朝5分でセットできる髪、作ります。</p>
+            </div>
+          </div>
           <p class="staff__role">Stylist</p>
-          <h3>中村 はると</h3>
+          <h3>中村 はると<span>Haruto Nakamura</span></h3>
           <p>メンズカットとパーマ担当。朝のセットが楽になるスタイルを作ります。</p>
           <p class="staff__meta">歴5年 / 古着とスニーカーが好き</p>
-        </div>
+        </article>
       </div>
     </section>
 
     <!-- ギャラリー -->
-    <section class="section gallery" id="gallery">
-      <h2 class="section__title">Style<span>スタイル</span></h2>
+    <section class="section" id="gallery">
+      <div class="section__head reveal">
+        <p class="section__num">05</p>
+        <h2 class="section__title">Style<span>スタイル</span></h2>
+        <p class="section__bg">STYLE</p>
+      </div>
+      <div class="filter reveal">
+        <button class="filter__btn is-active" data-filter="all">All</button>
+        <button class="filter__btn" data-filter="short">Short</button>
+        <button class="filter__btn" data-filter="bob">Bob</button>
+        <button class="filter__btn" data-filter="medium">Medium</button>
+        <button class="filter__btn" data-filter="long">Long</button>
+        <button class="filter__btn" data-filter="men">Men's</button>
+      </div>
       <div class="gallery__grid">
-        <figure class="gallery__item"><img src="images/style1.svg" alt="くびれミディ"><figcaption>くびれミディ</figcaption></figure>
-        <figure class="gallery__item"><img src="images/style2.svg" alt="ミルクティーベージュ"><figcaption>ミルクティーベージュ</figcaption></figure>
-        <figure class="gallery__item"><img src="images/style3.svg" alt="ハンサムショート"><figcaption>ハンサムショート</figcaption></figure>
-        <figure class="gallery__item"><img src="images/style4.svg" alt="ツイストパーマ"><figcaption>ツイストパーマ</figcaption></figure>
-        <figure class="gallery__item"><img src="images/style5.svg" alt="切りっぱなしボブ"><figcaption>切りっぱなしボブ</figcaption></figure>
-        <figure class="gallery__item"><img src="images/style6.svg" alt="ゆるふわロング"><figcaption>ゆるふわロング</figcaption></figure>
+        <button class="gallery__item" data-cat="medium" data-staff="佐藤 ゆうき" data-desc="首元でキュッとくびれて、毛先が外にはねるシルエット。ミディアムでも重く見えません。">
+          <img src="images/style1.svg" alt="くびれミディ"><span class="gallery__cap"><small>Medium</small>くびれミディ</span>
+        </button>
+        <button class="gallery__item" data-cat="medium" data-staff="高橋 みお" data-desc="赤みを抑えたやわらかいベージュ。ブリーチなしでも透明感が出せるカラーです。">
+          <img src="images/style2.svg" alt="ミルクティーベージュ"><span class="gallery__cap"><small>Medium / Color</small>ミルクティーベージュ</span>
+        </button>
+        <button class="gallery__item" data-cat="short" data-staff="佐藤 ゆうき" data-desc="えり足をすっきりさせた、かっこよさもあるショート。前髪は流すだけでキマります。">
+          <img src="images/style3.svg" alt="ハンサムショート"><span class="gallery__cap"><small>Short</small>ハンサムショート</span>
+        </button>
+        <button class="gallery__item" data-cat="men" data-staff="中村 はると" data-desc="ねじりながら巻くことで、立体感のある動きに。ワックスを揉みこむだけでOK。">
+          <img src="images/style4.svg" alt="ツイストパーマ"><span class="gallery__cap"><small>Men's</small>ツイストパーマ</span>
+        </button>
+        <button class="gallery__item" data-cat="bob" data-staff="佐藤 ゆうき" data-desc="毛先をまっすぐ切りそろえた、今っぽいボブ。ぱっつん前髪とも相性いいです。">
+          <img src="images/style5.svg" alt="切りっぱなしボブ"><span class="gallery__cap"><small>Bob</small>切りっぱなしボブ</span>
+        </button>
+        <button class="gallery__item" data-cat="long" data-staff="高橋 みお" data-desc="ゆるく巻いたような波ウェーブ。デジタルパーマなので乾かすだけでこの形になります。">
+          <img src="images/style6.svg" alt="ゆるふわロング"><span class="gallery__cap"><small>Long</small>ゆるふわロング</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- お客様の声 -->
+    <section class="section section--tint" id="voice">
+      <div class="section__head reveal">
+        <p class="section__num">06</p>
+        <h2 class="section__title">Voice<span>お客さまの声</span></h2>
+        <p class="section__bg">VOICE</p>
+      </div>
+      <div class="voice reveal">
+        <div class="voice__track" id="voice-track">
+          <figure class="voice__card">
+            <p class="voice__stars" aria-label="5点中5点">★★★★★</p>
+            <blockquote>今までどこに行っても広がってた髪が、はじめてまとまりました…！乾かし方まで教えてくれて本当にうれしかったです。</blockquote>
+            <figcaption>20代・女性 / カット＋髪質改善</figcaption>
+          </figure>
+          <figure class="voice__card">
+            <p class="voice__stars" aria-label="5点中5点">★★★★★</p>
+            <blockquote>ブリーチなしでこんなに明るくなるとは思ってませんでした。友達にも「色かわいい」って言われました。</blockquote>
+            <figcaption>大学生・女性 / 透明感カラー</figcaption>
+          </figure>
+          <figure class="voice__card">
+            <p class="voice__stars" aria-label="5点中5点">★★★★★</p>
+            <blockquote>パーマは初めてで不安だったけど、中村さんが細かく説明してくれたので安心でした。朝がめちゃくちゃ楽です。</blockquote>
+            <figcaption>20代・男性 / ツイストパーマ</figcaption>
+          </figure>
+          <figure class="voice__card">
+            <p class="voice__stars" aria-label="5点中4点">★★★★<span>★</span></p>
+            <blockquote>お店がこぢんまりしていて落ち着きます。人見知りなので、話しかけすぎない感じもちょうどよかったです。</blockquote>
+            <figcaption>30代・女性 / カット</figcaption>
+          </figure>
+          <figure class="voice__card">
+            <p class="voice__stars" aria-label="5点中5点">★★★★★</p>
+            <blockquote>ヘッドスパが気持ちよすぎて途中で寝てしまいました(笑)。肩こりもだいぶ楽になりました。</blockquote>
+            <figcaption>40代・女性 / ヘッドスパ40分</figcaption>
+          </figure>
+        </div>
+        <div class="voice__nav">
+          <button class="voice__arrow" data-dir="-1" aria-label="前へ">←</button>
+          <button class="voice__arrow" data-dir="1" aria-label="次へ">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section class="section" id="faq">
+      <div class="section__head reveal">
+        <p class="section__num">07</p>
+        <h2 class="section__title">FAQ<span>よくある質問</span></h2>
+        <p class="section__bg">FAQ</p>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>当日予約はできますか？</summary>
+          <p>空きがあれば大丈夫です。ネット予約は2時間前まで受け付けているので、急ぎの場合はお電話ください。</p>
+        </details>
+        <details>
+          <summary>子ども連れでも行けますか？</summary>
+          <p>はい、大丈夫です。お子さま用のイスや絵本も用意しています。ベビーカーのまま入れるので安心してください。</p>
+        </details>
+        <details>
+          <summary>ブリーチなしでどこまで明るくできますか？</summary>
+          <p>髪の状態によりますが、黒髪からでも透明感のあるベージュ系ならけっこう明るくできます。カウンセリングで一緒に相談しましょう。</p>
+        </details>
+        <details>
+          <summary>キャンセルはいつまでにすればいいですか？</summary>
+          <p>前日までにご連絡いただければキャンセル料はかかりません。当日キャンセルの場合は、できるだけ早めにお電話ください。</p>
+        </details>
       </div>
     </section>
 
     <!-- アクセス -->
-    <section class="section access" id="access">
-      <h2 class="section__title">Access<span>アクセス・店舗情報</span></h2>
-      <div class="access__wrap">
+    <section class="section section--tint" id="access">
+      <div class="section__head reveal">
+        <p class="section__num">08</p>
+        <h2 class="section__title">Access<span>アクセス・店舗情報</span></h2>
+        <p class="section__bg">ACCESS</p>
+      </div>
+      <div class="access__wrap reveal">
         <table class="access__table">
           <tr><th>店名</th><td>hair salon MOKU(モク)</td></tr>
           <tr><th>住所</th><td>〒150-0001<br>東京都渋谷区神宮前4-12-8 MOKUビル2F</td></tr>
           <tr><th>アクセス</th><td>表参道駅 A2出口から徒歩3分</td></tr>
           <tr><th>営業時間</th><td>平日 11:00〜20:00<br>土日祝 10:00〜19:00</td></tr>
           <tr><th>定休日</th><td>毎週火曜日</td></tr>
-          <tr><th>電話</th><td>03-6427-0815</td></tr>
+          <tr><th>電話</th><td><a href="tel:0364270815">03-6427-0815</a></td></tr>
           <tr><th>席数</th><td>セット面4席 / シャンプー台2台</td></tr>
           <tr><th>支払い</th><td>現金 / クレジットカード / 各種QR決済</td></tr>
           <tr><th>駐車場</th><td>なし(近くにコインパーキングあり)</td></tr>
@@ -158,10 +401,25 @@
       </div>
     </section>
 
+    <!-- インスタ -->
+    <section class="insta reveal">
+      <p class="insta__sub">Follow us on Instagram</p>
+      <h2 class="insta__title">@moku_hair</h2>
+      <div class="insta__grid">
+        <a href="#gallery"><img src="images/style6.svg" alt=""><span>♥ 248</span></a>
+        <a href="#gallery"><img src="images/style1.svg" alt=""><span>♥ 192</span></a>
+        <a href="#gallery"><img src="images/salon.svg" alt=""><span>♥ 311</span></a>
+        <a href="#gallery"><img src="images/style4.svg" alt=""><span>♥ 157</span></a>
+        <a href="#gallery"><img src="images/style2.svg" alt=""><span>♥ 276</span></a>
+        <a href="#gallery"><img src="images/style5.svg" alt=""><span>♥ 203</span></a>
+      </div>
+    </section>
+
     <!-- 予約 -->
     <section class="reserve" id="reserve">
-      <h2>Reservation</h2>
-      <p>ご予約はネットまたはお電話で受け付けています。<br>初めての方はネット予約で<strong>初回20%OFF</strong>！</p>
+      <p class="reserve__en">Reservation</p>
+      <h2>ご予約</h2>
+      <p class="reserve__lead">ご予約はネットまたはお電話で受け付けています。<br>初めての方はネット予約で<strong>初回20%OFF</strong>！</p>
       <div class="reserve__btns">
         <a href="#reserve-form" class="btn btn--white">ネットで予約する</a>
         <a href="tel:0364270815" class="btn btn--line">電話で予約する</a>
@@ -169,6 +427,10 @@
 
       <form class="reserve__form" id="reserve-form" novalidate>
         <h3>ネット予約フォーム</h3>
+        <ol class="form__steps" aria-hidden="true">
+          <li class="is-active">入力</li><li>確認</li><li>完了</li>
+        </ol>
+        <div class="form__fields" id="form-fields">
         <div class="form__row">
           <label for="f-name">お名前<span>必須</span></label>
           <input type="text" id="f-name" name="name" placeholder="山田 花子" required>
@@ -201,9 +463,11 @@
               <option>カット</option>
               <option>学生カット</option>
               <option>カット＋カラー</option>
+              <option>カット＋透明感カラー＋トリートメント</option>
               <option>リタッチカラー</option>
               <option>ダブルカラー</option>
               <option>カット＋デジタルパーマ</option>
+              <option>メンズツイストパーマ</option>
               <option>カット＋縮毛矯正</option>
               <option>髪質改善トリートメント</option>
               <option>ヘッドスパ</option>
@@ -231,10 +495,19 @@
           <textarea id="f-note" name="note" rows="4" placeholder="なりたいイメージや髪のお悩みがあれば書いてください"></textarea>
         </div>
         <p class="form__error" id="form-error" role="alert"></p>
-        <button type="submit" class="btn">この内容で予約する</button>
+        <button type="submit" class="btn">確認画面へ進む <span class="btn__arrow">→</span></button>
+        </div>
+        <div class="form__confirm" id="form-confirm" hidden>
+          <dl id="confirm-list"></dl>
+          <div class="form__confirm-btns">
+            <button type="button" class="btn btn--ghost" id="confirm-back">← 戻って直す</button>
+            <button type="button" class="btn" id="confirm-ok">予約を確定する</button>
+          </div>
+        </div>
       </form>
 
       <div class="reserve__done" id="reserve-done" hidden>
+        <div class="done__check">✓</div>
         <h3>ご予約ありがとうございます！</h3>
         <p id="done-text"></p>
         <p class="reserve__small">※このサイトはサンプルなので、実際には予約されません。</p>
@@ -243,96 +516,55 @@
   </main>
 
   <footer class="footer">
-    <p class="logo">MOKU<span>hair salon</span></p>
-    <div class="footer__sns">
-      <a href="#" aria-label="Instagram">Instagram @moku_hair</a>
-      <a href="#" aria-label="LINE">LINE @moku_hair</a>
+    <div class="footer__inner">
+      <div>
+        <p class="logo">MOKU<span>hair salon</span></p>
+        <p class="footer__info">東京都渋谷区神宮前4-12-8 MOKUビル2F<br>平日 11:00〜20:00 / 土日祝 10:00〜19:00<br>定休日：火曜日</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="#concept">Concept</a>
+        <a href="#menu">Menu</a>
+        <a href="#staff">Staff</a>
+        <a href="#gallery">Style</a>
+        <a href="#faq">FAQ</a>
+        <a href="#access">Access</a>
+      </nav>
+      <div class="footer__sns">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="LINE">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4C7 4 3 7.2 3 11.2c0 3.5 3.1 6.4 7.3 7l-.4 2.3 3.4-2.2c4.5-.4 7.7-3.4 7.7-7.1C21 7.2 17 4 12 4z"/></svg>
+        </a>
+      </div>
     </div>
     <small>&copy; 2026 hair salon MOKU</small>
   </footer>
 
-  <script>
-    // スマホ用メニューの開閉
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('is-open');
-      toggle.classList.toggle('is-open', open);
-      toggle.setAttribute('aria-expanded', open);
-    });
-    nav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        nav.classList.remove('is-open');
-        toggle.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', false);
-      });
-    });
+  <!-- スタイル詳細のモーダル -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__bg" data-close></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close" data-close aria-label="閉じる">×</button>
+      <img id="modal-img" src="" alt="">
+      <div class="modal__text">
+        <p class="modal__cat" id="modal-cat"></p>
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+        <p class="modal__staff">担当：<span id="modal-staff"></span></p>
+        <a href="#reserve-form" class="btn" id="modal-reserve">このスタイルで予約する</a>
+      </div>
+    </div>
+  </div>
 
-    // スクロールしたらふわっと表示
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('is-show');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.section').forEach(s => observer.observe(s));
+  <!-- スマホ用の固定ボタン -->
+  <div class="sp-bar">
+    <a href="tel:0364270815">電話する</a>
+    <a href="#reserve-form" class="sp-bar__main">ネット予約</a>
+  </div>
 
-    // 予約フォーム
-    const form = document.getElementById('reserve-form');
-    const dateInput = document.getElementById('f-date');
-    const timeSelect = document.getElementById('f-time');
-    const errorBox = document.getElementById('form-error');
+  <a href="#top" class="to-top" id="to-top" aria-label="ページの先頭へ">↑</a>
 
-    // 今日より前は選べないようにする
-    const today = new Date();
-    const pad = n => String(n).padStart(2, '0');
-    dateInput.min = `${today.getFullYear()}-${pad(today.getMonth() + 1)}-${pad(today.getDate())}`;
-
-    // 曜日によって受付時間を変える(平日は19:00まで、土日祝は18:00まで)
-    function updateTimes() {
-      const d = dateInput.value ? new Date(dateInput.value + 'T00:00') : null;
-      const weekend = d && (d.getDay() === 0 || d.getDay() === 6);
-      const start = weekend ? 10 : 11;
-      const end = weekend ? 18 : 19;
-      const current = timeSelect.value;
-      timeSelect.innerHTML = '<option value="">選択してください</option>';
-      for (let h = start; h <= end; h++) {
-        ['00', '30'].forEach(m => {
-          if (h === end && m === '30') return;
-          const t = `${h}:${m}`;
-          timeSelect.add(new Option(t, t, false, t === current));
-        });
-      }
-    }
-    updateTimes();
-    dateInput.addEventListener('change', updateTimes);
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      errorBox.textContent = '';
-
-      if (!form.checkValidity()) {
-        errorBox.textContent = '必須の項目を入力してください。';
-        return;
-      }
-      const d = new Date(dateInput.value + 'T00:00');
-      if (d.getDay() === 2) {
-        errorBox.textContent = '火曜日は定休日です。別の日を選んでください。';
-        return;
-      }
-
-      const data = new FormData(form);
-      const week = ['日', '月', '火', '水', '木', '金', '土'][d.getDay()];
-      document.getElementById('done-text').innerHTML =
-        `${data.get('name')} 様<br>` +
-        `${d.getMonth() + 1}月${d.getDate()}日(${week}) ${data.get('time')}〜<br>` +
-        `${data.get('menu')} / ${data.get('staff')}<br>` +
-        'ご来店をお待ちしています。';
-      form.hidden = true;
-      document.getElementById('reserve-done').hidden = false;
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

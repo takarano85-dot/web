@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9d9ca"/><stop offset="1" stop-color="#cdb19b"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6b4a3a"/><stop offset="1" stop-color="#9a6f55"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="520" fill="url(#bg)"/>
+  <circle cx="300" cy="110" r="120" fill="#fff" opacity=".2"/>
+  <!-- 葉っぱ -->
+  <g fill="#8f9b86" opacity=".75">
+    <path d="M20 330 Q-10 230 70 170 Q90 260 20 330 Z"/>
+    <path d="M40 360 Q40 270 130 240 Q120 320 40 360 Z" fill="#a3ad98"/>
+    <path d="M380 300 Q420 210 350 150 Q320 240 380 300 Z"/>
+    <path d="M370 350 Q380 270 300 230 Q300 310 370 350 Z" fill="#a3ad98"/>
+  </g>
+  <g stroke="#7d8a74" stroke-width="2" fill="none" opacity=".6">
+    <path d="M20 330 Q40 250 70 170"/><path d="M40 360 Q80 290 130 240"/>
+    <path d="M380 300 Q370 220 350 150"/><path d="M370 350 Q340 280 300 230"/>
+  </g>
+  <!-- 人物 -->
+  <g transform="translate(0 120)">
+    <path d="M118 150 Q108 56 200 54 Q292 56 282 150 Q306 240 290 300 Q314 350 296 400 L104 400 Q86 350 110 300 Q94 240 118 150 Z" fill="url(#hair)"/>
+    <path d="M64 400 Q66 296 200 282 Q334 296 336 400 Z" fill="#f5efe8"/>
+    <path d="M150 300 Q200 330 250 300" fill="none" stroke="#e2d5c8" stroke-width="3"/>
+    <rect x="176" y="205" width="48" height="85" rx="18" fill="#f1dccb"/>
+    <ellipse cx="200" cy="158" rx="64" ry="78" fill="#f1dccb"/>
+    <ellipse cx="170" cy="184" rx="11" ry="6" fill="#e8b4a0" opacity=".5"/>
+    <ellipse cx="230" cy="184" rx="11" ry="6" fill="#e8b4a0" opacity=".5"/>
+    <path d="M134 150 Q132 72 200 70 Q268 72 266 150 Q238 104 196 112 Q164 116 134 150 Z" fill="url(#hair)"/>
+    <path d="M128 170 Q98 240 124 296 Q100 350 124 400 L166 400 Q146 350 162 296 Q140 240 152 196 Z" fill="url(#hair)"/>
+    <path d="M272 170 Q302 240 276 296 Q300 350 276 400 L234 400 Q254 350 238 296 Q260 240 248 196 Z" fill="url(#hair)"/>
+    <g fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="5" stroke-linecap="round">
+      <path d="M150 98 Q166 76 198 72"/><path d="M214 74 Q240 78 254 96"/>
+      <path d="M136 250 Q130 280 140 310"/><path d="M264 250 Q270 280 260 310"/>
+    </g>
+    <g fill="none" stroke="#8a6454" stroke-width="2.8" stroke-linecap="round">
+      <path d="M162 166 Q172 174 182 166"/><path d="M218 166 Q228 174 238 166"/>
+      <path d="M191 200 Q200 207 209 200" stroke="#c98a7a"/>
+    </g>
+    <!-- 髪飾り -->
+    <g transform="translate(250 96)">
+      <circle r="7" fill="#fff"/><circle cx="10" cy="-6" r="6" fill="#fff"/><circle cx="4" cy="8" r="6" fill="#fff"/>
+      <circle cx="4" cy="1" r="3.5" fill="#e0b98f"/>
+    </g>
+  </g>
+  <!-- キラキラ -->
+  <g fill="#fff">
+    <path d="M330 60 l4 12 12 4 -12 4 -4 12 -4 -12 -12 -4 12 -4 z" opacity=".9"/>
+    <path d="M60 90 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 z" opacity=".7"/>
+  </g>
+</svg>
