@@ -1865,6 +1865,14 @@ button {
   height: 20px;
 }
 
+.footer__note {
+  max-width: 1100px;
+  margin: 0 auto 14px;
+  text-align: center;
+  font-size: 0.72rem;
+  color: #b3a69c;
+}
+
 .footer > small {
   display: block;
   text-align: center;
