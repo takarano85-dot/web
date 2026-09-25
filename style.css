@@ -1,0 +1,512 @@
+/* ===== 基本設定 ===== */
+:root {
+  --bg: #f7f3ee;
+  --bg-dark: #efe7dd;
+  --text: #3a3330;
+  --sub: #8a7d74;
+  --accent: #a8826a;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pc {
+  display: inline;
+}
+
+/* ===== ボタン ===== */
+.btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: 40px;
+  font-size: 0.9rem;
+  transition: opacity 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn--white {
+  background: var(--white);
+  color: var(--accent);
+}
+
+.btn--line {
+  background: transparent;
+  border: 1px solid var(--white);
+}
+
+/* ===== ヘッダー ===== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(247, 243, 238, 0.92);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+}
+
+.header__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  line-height: 1;
+}
+
+.logo span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--sub);
+  letter-spacing: 0.2em;
+  margin-top: 4px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.05rem;
+}
+
+.nav a:not(.nav__btn):hover {
+  color: var(--accent);
+}
+
+.nav__btn {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.85rem;
+  padding: 8px 22px;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: 30px;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--text);
+  transition: 0.3s;
+}
+
+.nav-toggle span:nth-child(1) { top: 0; }
+.nav-toggle span:nth-child(2) { top: 10px; }
+.nav-toggle span:nth-child(3) { top: 20px; }
+
+.nav-toggle.is-open span:nth-child(1) { top: 10px; transform: rotate(45deg); }
+.nav-toggle.is-open span:nth-child(2) { opacity: 0; }
+.nav-toggle.is-open span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
+
+/* ===== ヒーロー ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 8% 60px;
+  background:
+    linear-gradient(90deg, rgba(247, 243, 238, 0.95) 35%, rgba(247, 243, 238, 0.3)),
+    radial-gradient(circle at 75% 40%, #d9c3ae 0%, #c8a98f 30%, #b08f78 60%, #8e7160 100%);
+}
+
+.hero__sub {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-weight: 400;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.hero__lead {
+  color: var(--sub);
+  margin-bottom: 36px;
+}
+
+/* ===== セクション共通 ===== */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s, transform 0.9s;
+}
+
+.section.is-show {
+  opacity: 1;
+  transform: none;
+}
+
+.section__title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 2.6rem;
+  text-align: center;
+  letter-spacing: 0.15em;
+  margin-bottom: 56px;
+  line-height: 1.2;
+}
+
+.section__title span {
+  display: block;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.8rem;
+  color: var(--sub);
+  letter-spacing: 0.1em;
+  margin-top: 8px;
+}
+
+/* ===== コンセプト ===== */
+.concept__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.concept__num {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.4rem;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.concept__item h3 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.concept__item p:last-child {
+  font-size: 0.9rem;
+  color: var(--sub);
+}
+
+/* ===== メニュー ===== */
+.menu__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  background: var(--white);
+  padding: 50px;
+  border-radius: 6px;
+}
+
+.menu__col h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--accent);
+  border-bottom: 1px solid var(--bg-dark);
+  padding-bottom: 6px;
+  margin-bottom: 14px;
+}
+
+.menu__col dl {
+  margin-bottom: 36px;
+}
+
+.menu__col dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 6px 0;
+  font-size: 0.92rem;
+}
+
+.menu__col dd {
+  white-space: nowrap;
+}
+
+.menu__note {
+  font-size: 0.78rem;
+  color: var(--sub);
+}
+
+/* ===== スタッフ ===== */
+.staff__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.staff__img {
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+
+/* 写真が用意できるまでの仮の背景 */
+.staff__img--1 { background: linear-gradient(160deg, #d8c4b2, #a88b77); }
+.staff__img--2 { background: linear-gradient(160deg, #e2d2c6, #b89c8c); }
+.staff__img--3 { background: linear-gradient(160deg, #cfc2b3, #8f7b6b); }
+
+.staff__role {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+.staff__card h3 {
+  font-weight: 500;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.staff__card p:last-child {
+  font-size: 0.88rem;
+  color: var(--sub);
+}
+
+/* ===== ギャラリー ===== */
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gallery__item {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery__item figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: var(--white);
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+}
+
+/* 写真の代わりの仮カラー */
+.g1 { background: linear-gradient(135deg, #cbb29d, #9c7f6b); }
+.g2 { background: linear-gradient(135deg, #e3d0bd, #c2a48b); }
+.g3 { background: linear-gradient(135deg, #a89484, #6f5e52); }
+.g4 { background: linear-gradient(135deg, #d6c0ac, #a48572); }
+.g5 { background: linear-gradient(135deg, #bfa996, #8a705e); }
+.g6 { background: linear-gradient(135deg, #e8dacb, #b69a84); }
+
+/* ===== アクセス ===== */
+.access__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.access__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.access__table th,
+.access__table td {
+  text-align: left;
+  padding: 14px 8px;
+  border-bottom: 1px solid var(--bg-dark);
+  vertical-align: top;
+}
+
+.access__table th {
+  width: 100px;
+  font-weight: 500;
+}
+
+.access__map {
+  background: var(--bg-dark);
+  border-radius: 4px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--sub);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+}
+
+.access__map small {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.75rem;
+}
+
+/* ===== 予約 ===== */
+.reserve {
+  background: var(--accent);
+  color: var(--white);
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.reserve h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 2.6rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.reserve p {
+  margin-bottom: 36px;
+}
+
+.reserve strong {
+  font-weight: 500;
+  border-bottom: 1px solid var(--white);
+}
+
+.reserve__btns {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ===== フッター ===== */
+.footer {
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+
+.footer .logo {
+  margin-bottom: 20px;
+}
+
+.footer__sns {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.footer small {
+  color: var(--sub);
+  font-size: 0.75rem;
+}
+
+/* ===== スマホ対応 ===== */
+@media (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+    z-index: 101;
+  }
+
+  .nav {
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    font-size: 1.4rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .nav.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .hero {
+    padding: 120px 20px 60px;
+    background:
+      linear-gradient(rgba(247, 243, 238, 0.85), rgba(247, 243, 238, 0.85)),
+      radial-gradient(circle at 70% 30%, #d9c3ae, #8e7160);
+  }
+
+  .section {
+    padding: 70px 16px;
+  }
+
+  .section__title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .concept__grid,
+  .staff__grid,
+  .menu__wrap,
+  .access__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .menu__wrap {
+    padding: 30px 20px;
+    gap: 0;
+  }
+
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .access__table th {
+    width: 80px;
+  }
+}
