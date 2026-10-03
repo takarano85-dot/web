@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
+  <path d="M 170 150 C 160 120, 150 95, 145 75 C 165 85, 185 110, 192 145 Z" fill="#D9C4A8" stroke="#4A3F35" stroke-width="10" stroke-linejoin="round" />
+  <path d="M 270 150 C 280 120, 290 95, 295 75 C 275 85, 255 110, 248 145 Z" fill="#D9C4A8" stroke="#4A3F35" stroke-width="10" stroke-linejoin="round" />
+  <path d="M 220,150 C 270,140 305,175 312,225 C 320,280 305,330 268,358 C 240,378 200,378 172,358 C 135,330 120,280 128,225 C 135,175 170,140 220,150 Z"
+    fill="#D9C4A8" stroke="#4A3F35" stroke-width="11" stroke-linejoin="round" />
+  <path d="M 150 292 C 120 312, 110 342, 120 368 C 140 360, 158 335, 160 305 Z" fill="#B9A183" stroke="#4A3F35" stroke-width="9" stroke-linejoin="round" />
+  <path d="M 290 292 C 320 312, 330 342, 320 368 C 300 360, 282 335, 280 305 Z" fill="#B9A183" stroke="#4A3F35" stroke-width="9" stroke-linejoin="round" />
+  <circle cx="178" cy="216" r="38" fill="#ffffff" stroke="#4A3F35" stroke-width="7" />
+  <circle cx="262" cy="216" r="38" fill="#ffffff" stroke="#4A3F35" stroke-width="7" />
+  <circle cx="180" cy="222" r="15" fill="#4A3F35" />
+  <circle cx="260" cy="222" r="15" fill="#4A3F35" />
+  <path d="M 220 250 L 206 278 L 234 278 Z" fill="#F0A857" stroke="#4A3F35" stroke-width="6" stroke-linejoin="round" />
+</svg>
