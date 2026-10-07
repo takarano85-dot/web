@@ -1337,3 +1337,23 @@ button {
     letter-spacing: 0.04em;
   }
 }
+
+/* ===== 参考画像に合わせたフォント ===== */
+.hero h1 {
+  font-family: "Klee One", "Zen Old Mincho", serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.75;
+}
+
+.logo,
+.header.is-scrolled .logo {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  font-size: 1.9rem;
+  letter-spacing: 0.01em;
+}
+
+.logo__dot {
+  color: inherit;
+}
