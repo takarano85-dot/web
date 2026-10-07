@@ -9,24 +9,25 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f5d78'/%3E%3Cpath d='M12 38c7-6 13-6 20 0s13 6 20 0' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="header" id="header">
     <div class="header__inner">
-      <a href="#top" class="logo">nagi<span>hair salon</span></a>
+      <a href="#top" class="logo">nagi<span class="logo__dot">.</span><span class="logo__sub">HAIR SALON</span></a>
       <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
         <span></span><span></span>
       </button>
       <nav class="nav">
+        <a href="#top">Home</a>
         <a href="#concept">Concept</a>
         <a href="#menu">Menu</a>
         <a href="#staff">Staff</a>
         <a href="#faq">FAQ</a>
         <a href="#access">Access</a>
-        <a href="#reserve" class="nav__btn">ご予約</a>
+        <a href="#reserve" class="nav__btn">ご予約はこちら</a>
       </nav>
     </div>
   </header>
@@ -38,8 +39,8 @@
       <div class="hero__text">
         <p class="hero__en">Yuigahama, Kamakura</p>
         <h1>風が通るような、<br>軽やかな髪に。</h1>
-        <p class="hero__lead">海まで歩いて1分。<br>波の音が聞こえる小さな美容室です。</p>
-        <a href="#reserve" class="btn">ご予約はこちら</a>
+        <p class="hero__lead">nagiは、海まで歩いて1分の小さな美容室。<br>乾かすだけでまとまる、扱いやすい髪をつくります。</p>
+        <a href="#reserve" class="hero__btn">ご予約はこちら<span>→</span></a>
       </div>
       <p class="hero__status"><span class="status-dot" id="status-dot"></span><span id="status-text">営業時間を確認中…</span></p>
     </section>
@@ -299,7 +300,7 @@
   </main>
 
   <footer class="footer">
-    <p class="logo logo--light">nagi<span>hair salon</span></p>
+    <p class="logo logo--light">nagi<span class="logo__dot">.</span><span class="logo__sub">HAIR SALON</span></p>
     <nav class="footer__nav">
       <a href="#concept">Concept</a><a href="#menu">Menu</a><a href="#staff">Staff</a><a href="#faq">FAQ</a><a href="#access">Access</a>
     </nav>
