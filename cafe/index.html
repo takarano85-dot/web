@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>komorebi coffee &amp; bake | 清澄白河のカフェ</title>
+  <meta name="description" content="清澄白河駅から徒歩5分のカフェ komorebi。毎朝焼く焼き菓子と、ていねいに淹れるコーヒーのお店です。">
+  <meta name="theme-color" content="#c8643b">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 流れるお知らせ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__inner">
+      <span>☀ OPEN 8:00 — 19:00</span><span>✿ 焼きたてスコーン 9:00〜</span><span>☕ テイクアウトOK</span><span>✦ 毎週水曜日はお休み</span>
+      <span>☀ OPEN 8:00 — 19:00</span><span>✿ 焼きたてスコーン 9:00〜</span><span>☕ テイクアウトOK</span><span>✦ 毎週水曜日はお休み</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <nav class="nav nav--left">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#takeout">Take out</a>
+    </nav>
+    <a href="#top" class="logo">komorebi<span>coffee &amp; bake</span></a>
+    <nav class="nav nav--right">
+      <a href="#hours">Hours</a>
+      <a href="#reserve" class="nav__btn">席を予約</a>
+    </nav>
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="sp-nav" id="sp-nav">
+      <a href="#about">About</a><a href="#menu">Menu</a><a href="#takeout">Take out</a><a href="#hours">Hours</a><a href="#reserve" class="nav__btn">席を予約</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ヒーロー -->
+    <section class="hero">
+      <div class="hero__photo">
+        <img src="images/interior.jpg" alt="木のテーブルと植物、焼き菓子のショーケースが並ぶ明るい店内">
+        <p class="badge"><svg viewBox="0 0 120 120"><defs><path id="c" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs><text><textPath href="#c" textLength="272">BAKED FRESH EVERY MORNING ・ </textPath></text></svg><b>毎朝<br>焼きたて</b></p>
+      </div>
+      <div class="hero__text">
+        <p class="hero__en">good coffee,<br><em>good light.</em></p>
+        <h1>木漏れ日のなかで、<br>ひと息つこう。</h1>
+        <p class="hero__lead">清澄白河の小さなコーヒースタンド。<br>毎朝焼く焼き菓子と、ていねいに淹れる一杯を。</p>
+        <div class="status"><span class="status__dot" id="status-dot"></span><span id="status-text">営業時間を確認中…</span></div>
+      </div>
+    </section>
+
+    <!-- 今日のおすすめ -->
+    <section class="today">
+      <div class="today__card">
+        <p class="today__label">Today's pick</p>
+        <img src="images/latte.jpg" alt="グラスに入ったアイスカフェラテ">
+        <div>
+          <h2>アイスカフェラテ</h2>
+          <p>ミルクとエスプレッソの二層がきれいな、夏の定番。</p>
+          <p class="today__price">¥650</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- アバウト -->
+    <section class="about" id="about">
+      <div class="about__photos">
+        <img class="p1" src="images/latte.jpg" alt="アイスカフェラテ">
+        <img class="p2" src="images/pastry.jpg" alt="スコーンやマフィンが並ぶショーケース">
+        <span class="sticker">since<br>2019</span>
+      </div>
+      <div class="about__text">
+        <p class="eyebrow">About us</p>
+        <h2 class="h2">ふらっと寄れる、<br>まちの縁側みたいなお店。</h2>
+        <p>komorebi(こもれび)は、木の葉のすき間からこぼれる光のこと。大きな窓から光がたっぷり入る店内で、のんびりコーヒーを楽しんでもらえたらうれしいです。</p>
+        <p>豆は近くの焙煎所から、毎週その時期においしいものを。スコーンやマフィンは、毎朝お店のキッチンで焼いています。</p>
+      </div>
+    </section>
+
+    <!-- メニュー -->
+    <section class="menu" id="menu">
+      <div class="menu__head">
+        <p class="eyebrow">Menu</p>
+        <h2 class="h2">メニュー</h2>
+      </div>
+      <div class="tabs" role="tablist">
+        <button class="tab is-active" role="tab" aria-selected="true" data-tab="drink">☕ Drink</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="bake">🥐 Bake</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="food">🍞 Food</button>
+      </div>
+
+      <div class="panel is-active" data-panel="drink" role="tabpanel">
+        <img src="images/latte.jpg" alt="アイスカフェラテ">
+        <ul>
+          <li><span>ブレンドコーヒー<small>ホット / アイス</small></span><b>¥500</b></li>
+          <li><span>カフェラテ<small>オーツミルクに変更 +¥50</small></span><b>¥600</b></li>
+          <li><span>アイスカフェラテ</span><b>¥650</b></li>
+          <li><span>今週のハンドドリップ<small>産地は店頭で</small></span><b>¥650</b></li>
+          <li><span>ほうじ茶ラテ</span><b>¥600</b></li>
+          <li><span>レモネード</span><b>¥550</b></li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="bake" role="tabpanel">
+        <img src="images/pastry.jpg" alt="ショーケースに並ぶ焼き菓子">
+        <ul>
+          <li><span>プレーンスコーン<small>クロテッドクリーム付き</small></span><b>¥380</b></li>
+          <li><span>チョコチップマフィン</span><b>¥420</b></li>
+          <li><span>バナナブレッド</span><b>¥400</b></li>
+          <li><span>ベイクドチーズケーキ</span><b>¥550</b></li>
+          <li><span>季節のタルト<small>なくなり次第終了</small></span><b>¥600</b></li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="food" role="tabpanel">
+        <img src="images/interior.jpg" alt="カウンターとショーケース">
+        <ul>
+          <li><span>モーニングプレート<small>8:00〜11:00・ドリンク付き</small></span><b>¥980</b></li>
+          <li><span>ハムとチーズのトースト</span><b>¥750</b></li>
+          <li><span>アボカドトースト</span><b>¥850</b></li>
+          <li><span>きょうのスープ<small>パン付き</small></span><b>¥700</b></li>
+        </ul>
+      </div>
+      <p class="menu__note">価格はすべて税込です。セットにするとドリンクが ¥100 引き。</p>
+    </section>
+
+    <!-- テイクアウト -->
+    <section class="takeout" id="takeout">
+      <p class="eyebrow eyebrow--light">Take out</p>
+      <h2 class="h2">おうちでも、komorebi。</h2>
+      <ul class="takeout__list">
+        <li><span class="ic">☕</span><b>ドリンク</b>全メニュー持ち帰りOK。<br>マイボトルで ¥30 引き。</li>
+        <li><span class="ic">🧺</span><b>焼き菓子</b>ギフト用の箱もご用意。<br>前日までのご予約で取り置き。</li>
+        <li><span class="ic">🫘</span><b>コーヒー豆</b>100g ¥900〜。<br>挽き方はお好みで。</li>
+      </ul>
+    </section>
+
+    <!-- 営業時間・アクセス -->
+    <section class="hours" id="hours">
+      <div class="hours__card">
+        <p class="eyebrow">Hours</p>
+        <h2 class="h2">営業時間</h2>
+        <table class="week" id="week">
+          <tr data-day="1"><th>月</th><td>8:00 — 19:00</td></tr>
+          <tr data-day="2"><th>火</th><td>8:00 — 19:00</td></tr>
+          <tr data-day="3"><th>水</th><td class="off">定休日</td></tr>
+          <tr data-day="4"><th>木</th><td>8:00 — 19:00</td></tr>
+          <tr data-day="5"><th>金</th><td>8:00 — 21:00</td></tr>
+          <tr data-day="6"><th>土</th><td>9:00 — 19:00</td></tr>
+          <tr data-day="0"><th>日</th><td>9:00 — 18:00</td></tr>
+        </table>
+        <p class="hours__note">ラストオーダーは閉店の30分前です。</p>
+      </div>
+      <div class="access">
+        <p class="eyebrow">Access</p>
+        <h2 class="h2">アクセス</h2>
+        <dl>
+          <div><dt>住所</dt><dd>〒135-0021 東京都江東区白河0-0-0 1F</dd></div>
+          <div><dt>最寄り</dt><dd>半蔵門線・大江戸線「清澄白河駅」A3出口から徒歩5分</dd></div>
+          <div><dt>席数</dt><dd>24席(テラス6席)</dd></div>
+          <div><dt>電話</dt><dd><a href="tel:0300000000">03-0000-0000</a></dd></div>
+          <div><dt>その他</dt><dd>Wi-Fi・電源あり / ペットはテラス席のみOK</dd></div>
+        </dl>
+        <div class="map">
+          <iframe src="https://maps.google.com/maps?q=%E6%B8%85%E6%BE%84%E7%99%BD%E6%B2%B3%E9%A7%85&z=16&output=embed" title="地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 席の予約 -->
+    <section class="reserve" id="reserve">
+      <div class="reserve__inner">
+        <p class="eyebrow">Reservation</p>
+        <h2 class="h2">席の予約</h2>
+        <p class="reserve__lead">4名さま以上のときや、週末のお昼どきは予約がおすすめです。</p>
+
+        <form class="form" id="reserve-form" novalidate>
+          <div id="form-fields">
+            <div class="form__row"><label for="f-name">お名前 <span>必須</span></label><input type="text" id="f-name" name="name" placeholder="山田 花子" required></div>
+            <div class="form__row"><label for="f-tel">電話番号 <span>必須</span></label><input type="tel" id="f-tel" name="tel" placeholder="090-1234-5678" required></div>
+            <div class="form__three">
+              <div class="form__row"><label for="f-date">日にち <span>必須</span></label><input type="date" id="f-date" name="date" required></div>
+              <div class="form__row"><label for="f-time">時間 <span>必須</span></label><select id="f-time" name="time" required><option value="">選択</option></select></div>
+              <div class="form__row"><label for="f-people">人数 <span>必須</span></label><select id="f-people" name="people" required><option value="">選択</option><option>1名</option><option>2名</option><option>3名</option><option>4名</option><option>5名</option><option>6名</option></select></div>
+            </div>
+            <div class="form__row">
+              <p class="form__label">席のご希望</p>
+              <div class="chips">
+                <label><input type="radio" name="seat" value="どこでもOK" checked><span>どこでもOK</span></label>
+                <label><input type="radio" name="seat" value="テーブル"><span>テーブル</span></label>
+                <label><input type="radio" name="seat" value="窓ぎわ"><span>窓ぎわ</span></label>
+                <label><input type="radio" name="seat" value="テラス"><span>テラス</span></label>
+              </div>
+            </div>
+            <p class="form__error" id="form-error" role="alert"></p>
+            <button type="submit" class="btn btn--full">確認する →</button>
+          </div>
+          <div id="form-confirm" hidden>
+            <dl class="form__confirm" id="confirm-list"></dl>
+            <div class="form__btns">
+              <button type="button" class="btn btn--ghost" id="confirm-back">戻る</button>
+              <button type="button" class="btn" id="confirm-ok">予約を確定する</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="form form--done" id="reserve-done" hidden>
+          <p class="done__mark">☕</p>
+          <h3>ご予約ありがとうございます！</h3>
+          <p id="done-text"></p>
+          <p class="done__note">※このサイトはサンプルなので、実際には予約されません。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="logo logo--light">komorebi<span>coffee &amp; bake</span></p>
+    <p class="footer__note">※このサイトは架空のカフェのサンプルです。店名・住所・電話番号などはすべて架空のものです。</p>
+    <small>&copy; 2026 komorebi coffee &amp; bake</small>
+  </footer>
+
+  <a href="#reserve" class="sp-btn">席を予約する</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
