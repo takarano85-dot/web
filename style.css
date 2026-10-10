@@ -1357,3 +1357,24 @@ button {
 .logo__dot {
   color: inherit;
 }
+
+/* ===== ヘッダーが画面上部に隠れないように＋スマホメニューが全画面で開くように ===== */
+.header {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+}
+
+.hero {
+  margin-top: 0;
+}
+
+@media (max-width: 820px) {
+  .header {
+    backdrop-filter: none;
+    background: var(--bg);
+  }
+
+  .hero {
+    margin-top: 0;
+  }
+}
