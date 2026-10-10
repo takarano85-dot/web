@@ -414,3 +414,69 @@ html, body { overflow-x: clip; }
 @media (max-width: 860px) {
   .badge { right: 6px; }
 }
+
+/* ===== 落ち着いたトーンに調整 ===== */
+:root {
+  --terra: #b4714f;
+  --terra-dark: #95593b;
+  --moss: #6b7356;
+  --line: #e2d6c6;
+}
+
+body { letter-spacing: 0.05em; }
+.ticker { background: #ede3d4; color: var(--sub); font-size: 0.76rem; letter-spacing: 0.12em; }
+.ticker__inner { gap: 28px; animation-duration: 48s; }
+.header { border-bottom: 1px solid var(--line); }
+.nav__btn { background: var(--terra); }
+.btn { border-radius: 999px; }
+.btn:hover { transform: none; }
+.btn--ghost { border-width: 1px; }
+
+.hero__photo img { border-radius: 20px; }
+.badge { width: 118px; height: 118px; right: 24px; bottom: 24px; transform: none; background: rgba(246, 239, 228, 0.92); color: var(--brown); font-size: 0.85rem; }
+.badge svg { animation-duration: 40s; }
+.hero__en { font-weight: 400; }
+.status { border: 1px solid var(--line); background: var(--paper); font-weight: 400; }
+
+.today__card { transform: none; border: 1px solid var(--line); box-shadow: 0 18px 40px -26px rgba(59, 42, 32, 0.35); }
+.today__label { background: transparent; color: var(--terra); padding: 0 6px; top: -14px; left: 18px; background: var(--cream); }
+
+.about__photos img { border: none; border-radius: 14px; box-shadow: 0 24px 50px -30px rgba(59, 42, 32, 0.45); }
+.about__photos .p1 { transform: none; width: 60%; }
+.about__photos .p2 { transform: none; width: 54%; }
+
+.menu { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.tab { border-width: 1px; border-color: var(--line); font-size: 1.05rem; }
+.tab.is-active { background: var(--brown); border-color: var(--brown); }
+.panel img { border-radius: 18px; border: none; aspect-ratio: 4 / 5; }
+.panel li { border-bottom: 1px solid var(--line); }
+.panel li b { font-weight: 400; }
+
+.takeout { background: #ece3d6; color: var(--brown); }
+.takeout .eyebrow--light { color: var(--terra); }
+.takeout__list li { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; }
+.takeout__list .ic { display: block; width: auto; height: auto; background: none; border-radius: 0; font-family: var(--soft); font-style: italic; font-size: 1.3rem; color: var(--terra); margin-bottom: 8px; }
+.takeout__list b { font-weight: 500; }
+
+.hours__card { border: 1px solid var(--line); box-shadow: none; border-radius: 20px; }
+.week th, .week td { border-bottom: 1px solid var(--line); }
+.week tr.is-today { background: #f3e6d8; }
+.access dl div { border-bottom: 1px solid var(--line); }
+.map { border: 1px solid var(--line); border-radius: 18px; }
+
+.reserve { border-top: 1px solid var(--line); }
+.form { border: 1px solid var(--line); border-radius: 20px; }
+.form__row input[type="text"], .form__row input[type="tel"], .form__row input[type="date"], .form__row select { border-width: 1px; border-radius: 10px; }
+.chips span { border-width: 1px; border-color: var(--line); }
+.chips input:checked + span { background: var(--brown); border-color: var(--brown); }
+.form__confirm div { border-bottom: 1px solid var(--line); }
+.done__mark { font-family: var(--soft); font-style: italic; font-size: 2.2rem; color: var(--terra); }
+
+@media (max-width: 860px) {
+  .badge { width: 96px; height: 96px; right: 14px; bottom: 14px; font-size: 0.72rem; }
+  .hours__card { box-shadow: none; }
+}
+
+.form__row .chips label span { background: transparent; color: var(--brown); font-size: 0.86rem; padding: 8px 18px; margin: 0; border: 1px solid var(--line); border-radius: 999px; }
+.form__row .chips label input:checked + span { background: var(--brown); color: var(--cream); border-color: var(--brown); }
+.form__row .chips label { display: inline-block; margin: 0; }
