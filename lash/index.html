@@ -5,146 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>eyelash &amp; eyebrow ligne | 代官山のまつげ・眉サロン</title>
   <meta name="description" content="代官山駅から徒歩3分のまつげ・眉毛サロン ligne(リーニュ)。顔立ちに合わせた、ちょうどいい目もとをつくります。">
-  <meta name="theme-color" content="#2b2a28">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Jost:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../fonts/fonts.css">
+  <meta name="theme-color" content="#1a1a19">
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="header">
-    <div class="header__inner">
-      <a href="#top" class="logo">LIGNE<span>eyelash &amp; eyebrow</span></a>
-      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button>
-      <nav class="nav">
-        <a href="#concept">Concept</a>
-        <a href="#menu">Menu</a>
-        <a href="#flow">Flow</a>
-        <a href="#faq">FAQ</a>
-        <a href="#access">Access</a>
-        <a href="#reserve" class="nav__btn">Reserve</a>
-      </nav>
-    </div>
+  <!-- PCは左にたての帯、スマホは上の細いバー -->
+  <header class="rail">
+    <a href="#top" class="rail__logo">ligne</a>
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav">
+      <a href="#concept"><i>01</i>Concept</a>
+      <a href="#menu"><i>02</i>Menu</a>
+      <a href="#flow"><i>03</i>Flow</a>
+      <a href="#faq"><i>04</i>FAQ</a>
+      <a href="#access"><i>05</i>Access</a>
+      <a href="#reserve" class="nav__sp-reserve">ご予約</a>
+    </nav>
+    <p class="rail__copy">eyelash &amp; eyebrow — Daikanyama</p>
   </header>
 
+  <a href="#reserve" class="reserve-circle"><span>Reserve</span></a>
+
   <main id="top">
-    <!-- ヒーロー:左に文字、右に写真 -->
+    <!-- ヒーロー -->
     <section class="hero">
-      <div class="hero__text">
-        <p class="hero__no">— Daikanyama, Tokyo</p>
-        <h1>目もとに、<br>一本の<br>きれいな線を。</h1>
-        <p class="hero__lead">まつげと眉は、顔の印象を決める「線」。<br>骨格に合わせて、<br class="sp">ちょうどいい形をつくります。</p>
-        <div class="hero__btns">
-          <a href="#reserve" class="btn">ご予約はこちら</a>
-          <a href="#menu" class="link">メニューを見る</a>
-        </div>
-      </div>
-      <div class="hero__img"><img src="images/room.jpg" alt="やわらかい照明の施術ルーム。白いベッドと丸い鏡"></div>
+      <img class="hero__img" src="images/room.jpg" alt="やわらかい照明の施術ルーム。白いベッドと丸い鏡">
+      <p class="hero__vertical">目もとに、一本のきれいな線を。</p>
+      <h1 class="hero__word">ligne</h1>
+      <p class="hero__sub">eyelash &amp; eyebrow salon<br>Daikanyama, Tokyo</p>
     </section>
 
-    <!-- 3つの数字 -->
-    <section class="facts">
-      <div><b>3<small>min</small></b><span>代官山駅から徒歩</span></div>
-      <div><b>1<small>on</small>1</b><span>完全個室でマンツーマン</span></div>
-      <div><b>30<small>days</small></b><span>施術後の無料お直し期間</span></div>
+    <!-- ひとこと -->
+    <section class="statement">
+      <p class="statement__en">— the beauty of a single line</p>
+      <p class="statement__ja">まつげと眉は、<br>顔の印象を決める「線」。<br>「盛る」より、「整える」。</p>
     </section>
 
     <!-- コンセプト -->
-    <section class="section concept" id="concept">
-      <div class="concept__text reveal">
-        <p class="label">01 / Concept</p>
-        <h2 class="title">「盛る」より、<br>「整える」。</h2>
-        <p>ligne(リーニュ)は、フランス語で「線」という意味です。まつげの向きや長さ、眉の角度がほんの少し変わるだけで、顔の印象は大きく変わります。</p>
-        <p>流行の形をそのままのせるのではなく、骨格や目の形、なりたい雰囲気をうかがって、あなたにいちばん似合う「線」を一緒に見つけます。</p>
-      </div>
+    <section class="concept" id="concept">
+      <p class="bignum">01</p>
       <div class="concept__img reveal"><img src="images/work.jpg" alt="アイリストがお客さまのまつげを施術している様子"></div>
+      <div class="concept__body reveal">
+        <p class="kicker">Concept</p>
+        <h2 class="h2">あなたにいちばん<br>似合う線を。</h2>
+        <div class="cols">
+          <p>ligne(リーニュ)は、フランス語で「線」という意味です。まつげの向きや長さ、眉の角度がほんの少し変わるだけで、顔の印象は大きく変わります。</p>
+          <p>流行の形をそのままのせるのではなく、骨格や目の形、なりたい雰囲気をうかがって、あなたに似合う「線」を一緒に見つけます。</p>
+        </div>
+        <ul class="facts">
+          <li><b>3</b><span>min</span>代官山駅から徒歩</li>
+          <li><b>2</b><span>rooms</span>完全個室・マンツーマン</li>
+          <li><b>30</b><span>days</span>無料お直し期間</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- メニュー -->
-    <section class="wide" id="menu">
-      <div class="section">
-        <div class="head reveal"><p class="label">02 / Menu</p><h2 class="title">メニュー・料金</h2></div>
-
-        <div class="tabs reveal" role="tablist">
-          <button class="tab is-active" role="tab" aria-selected="true" data-tab="lash">Eyelash</button>
-          <button class="tab" role="tab" aria-selected="false" data-tab="brow">Eyebrow</button>
-          <button class="tab" role="tab" aria-selected="false" data-tab="set">Set</button>
+    <!-- メニュー(黒) -->
+    <section class="menu" id="menu">
+      <div class="menu__head">
+        <p class="bignum bignum--light">02</p>
+        <div>
+          <p class="kicker kicker--light">Menu &amp; Price</p>
+          <h2 class="h2">メニュー・料金</h2>
         </div>
-
-        <div class="menu reveal">
-          <div class="panel is-active" data-panel="lash" role="tabpanel">
-            <dl>
-              <div><dt>まつげパーマ<small>根元から自然に上げる、いちばん人気のメニュー</small></dt><dd>¥6,600</dd></div>
-              <div><dt>まつげパーマ＋美容液<small>パーマ後のダメージをケア</small></dt><dd>¥7,700</dd></div>
-              <div><dt>フラットラッシュ 100本<small>軽くて持ちのいいエクステ</small></dt><dd>¥6,600</dd></div>
-              <div><dt>フラットラッシュ 140本</dt><dd>¥8,250</dd></div>
-              <div><dt>エクステ付け放題<small>90分</small></dt><dd>¥9,900</dd></div>
-            </dl>
-          </div>
-          <div class="panel" data-panel="brow" role="tabpanel">
-            <dl>
-              <div><dt>アイブロウWAX<small>カウンセリング・眉デザイン込み</small></dt><dd>¥6,050</dd></div>
-              <div><dt>アイブロウWAX＋眉カラー<small>髪色に合わせて色味を調整</small></dt><dd>¥7,700</dd></div>
-              <div><dt>ハリウッドブロウリフト<small>毛流れを整える眉のパーマ</small></dt><dd>¥7,150</dd></div>
-              <div><dt>眉メイクレッスン<small>30分・自分で描けるように</small></dt><dd>¥3,300</dd></div>
-            </dl>
-          </div>
-          <div class="panel" data-panel="set" role="tabpanel">
-            <dl>
-              <div><dt>まつげパーマ＋アイブロウWAX<small>いちばん人気のセット</small></dt><dd>¥11,000</dd></div>
-              <div><dt>まつげパーマ＋ブロウリフト</dt><dd>¥12,100</dd></div>
-              <div><dt>エクステ100本＋アイブロウWAX</dt><dd>¥11,550</dd></div>
-            </dl>
-          </div>
-          <div class="menu__side">
-            <img src="images/items.jpg" alt="まつげ用の美容液やツイーザーが並ぶカウンター">
-            <p>まつげと眉に負担の少ない商材を選んでいます。<br>はじめての方は、全メニュー <strong>¥1,000 OFF</strong>。</p>
-          </div>
-        </div>
-        <p class="note">※表示はすべて税込です。施術後30日以内のお直しは無料です。</p>
+        <p class="menu__first">はじめての方は、全メニュー <em>¥1,000 off</em></p>
       </div>
+      <div class="menu__grid">
+        <div class="menu__col reveal">
+          <h3>Eyelash</h3>
+          <dl>
+            <div><dt>まつげパーマ</dt><dd>6,600</dd></div>
+            <div><dt>まつげパーマ＋美容液</dt><dd>7,700</dd></div>
+            <div><dt>フラットラッシュ 100本</dt><dd>6,600</dd></div>
+            <div><dt>フラットラッシュ 140本</dt><dd>8,250</dd></div>
+            <div><dt>エクステ付け放題 90分</dt><dd>9,900</dd></div>
+          </dl>
+        </div>
+        <div class="menu__col reveal">
+          <h3>Eyebrow</h3>
+          <dl>
+            <div><dt>アイブロウWAX</dt><dd>6,050</dd></div>
+            <div><dt>WAX＋眉カラー</dt><dd>7,700</dd></div>
+            <div><dt>ハリウッドブロウリフト</dt><dd>7,150</dd></div>
+            <div><dt>眉メイクレッスン 30分</dt><dd>3,300</dd></div>
+          </dl>
+        </div>
+        <div class="menu__col reveal">
+          <h3>Set</h3>
+          <dl>
+            <div><dt>まつげパーマ＋眉WAX</dt><dd>11,000</dd></div>
+            <div><dt>まつげパーマ＋ブロウリフト</dt><dd>12,100</dd></div>
+            <div><dt>エクステ100本＋眉WAX</dt><dd>11,550</dd></div>
+          </dl>
+          <figure class="menu__img"><img src="images/items.jpg" alt="まつげ用の美容液やツイーザーが並ぶカウンター"></figure>
+        </div>
+      </div>
+      <p class="menu__note">※価格はすべて税込(円)です。施術後30日以内のお直しは無料です。</p>
     </section>
 
     <!-- 流れ -->
-    <section class="section" id="flow">
-      <div class="head reveal"><p class="label">03 / Flow</p><h2 class="title">ご来店の流れ</h2></div>
-      <ol class="flow">
-        <li class="reveal"><span>01</span><h3>カウンセリング</h3><p>なりたい雰囲気や、ふだんのメイクをうかがいます。</p></li>
-        <li class="reveal"><span>02</span><h3>デザイン</h3><p>骨格に合わせて、形と長さを一緒に決めます。</p></li>
-        <li class="reveal"><span>03</span><h3>施術</h3><p>完全個室で、横になってリラックスしたまま。</p></li>
-        <li class="reveal"><span>04</span><h3>ホームケア</h3><p>長持ちさせるコツと、次回の目安をお伝えします。</p></li>
+    <section class="flow" id="flow">
+      <p class="bignum">03</p>
+      <div class="flow__head"><p class="kicker">Flow</p><h2 class="h2">ご来店の流れ</h2></div>
+      <ol class="flow__list">
+        <li class="reveal"><i>i.</i><h3>カウンセリング</h3><p>なりたい雰囲気や、ふだんのメイクをうかがいます。</p></li>
+        <li class="reveal"><i>ii.</i><h3>デザイン</h3><p>骨格に合わせて、形と長さを一緒に決めます。</p></li>
+        <li class="reveal"><i>iii.</i><h3>施術</h3><p>完全個室で、横になってリラックスしたまま。</p></li>
+        <li class="reveal"><i>iv.</i><h3>ホームケア</h3><p>長持ちさせるコツと、次回の目安をお伝えします。</p></li>
       </ol>
     </section>
 
     <!-- よくある質問 -->
-    <section class="wide" id="faq">
-      <div class="section">
-        <div class="head reveal"><p class="label">04 / FAQ</p><h2 class="title">よくある質問</h2></div>
-        <div class="faq reveal">
-          <details><summary>施術時間はどのくらいですか？</summary><p>まつげパーマは約60分、セットメニューは約90分です。カウンセリングの時間も含まれています。</p></details>
-          <details><summary>コンタクトはつけたままで大丈夫ですか？</summary><p>まつげの施術中は目を閉じるので、外していただくのがおすすめです。ケースと保存液はご用意しています。</p></details>
-          <details><summary>メイクをしたまま行っても大丈夫ですか？</summary><p>大丈夫です。目もとや眉のメイクはこちらでやさしくオフしてから施術します。</p></details>
-          <details><summary>仕上がりが気に入らなかったときは？</summary><p>施術後30日以内であれば、無料でお直しします。お気軽にご連絡ください。</p></details>
-        </div>
+    <section class="faq" id="faq">
+      <p class="bignum">04</p>
+      <div class="faq__head"><p class="kicker">Q &amp; A</p><h2 class="h2">よくある質問</h2></div>
+      <div class="faq__list reveal">
+        <details><summary>施術時間はどのくらいですか？</summary><p>まつげパーマは約60分、セットメニューは約90分です。カウンセリングの時間も含まれています。</p></details>
+        <details><summary>コンタクトはつけたままで大丈夫ですか？</summary><p>まつげの施術中は目を閉じるので、外していただくのがおすすめです。ケースと保存液はご用意しています。</p></details>
+        <details><summary>メイクをしたまま行っても大丈夫ですか？</summary><p>大丈夫です。目もとや眉のメイクはこちらでやさしくオフしてから施術します。</p></details>
+        <details><summary>仕上がりが気に入らなかったときは？</summary><p>施術後30日以内であれば、無料でお直しします。お気軽にご連絡ください。</p></details>
       </div>
     </section>
 
     <!-- アクセス -->
-    <section class="section access" id="access">
-      <div class="reveal">
-        <p class="label">05 / Access</p>
-        <h2 class="title">店舗情報</h2>
-        <table>
-          <tr><th>店名</th><td>eyelash &amp; eyebrow ligne(リーニュ)</td></tr>
-          <tr><th>住所</th><td>〒150-0034<br>東京都渋谷区代官山町0-0-0 2F</td></tr>
-          <tr><th>アクセス</th><td>東急東横線「代官山駅」から徒歩3分</td></tr>
-          <tr><th>営業時間</th><td>平日 11:00〜20:00 / 土日祝 10:00〜19:00</td></tr>
-          <tr><th>定休日</th><td>毎週月曜日</td></tr>
-          <tr><th>電話</th><td><a href="tel:0300000000">03-0000-0000</a></td></tr>
-          <tr><th>席数</th><td>完全個室 2室</td></tr>
-        </table>
+    <section class="access" id="access">
+      <p class="bignum">05</p>
+      <div class="access__body reveal">
+        <p class="kicker">Access</p>
+        <h2 class="h2">店舗情報</h2>
+        <dl class="info">
+          <div><dt>Address</dt><dd>〒150-0034 東京都渋谷区代官山町0-0-0 2F</dd></div>
+          <div><dt>Station</dt><dd>東急東横線「代官山駅」から徒歩3分</dd></div>
+          <div><dt>Open</dt><dd>平日 11:00–20:00 / 土日祝 10:00–19:00</dd></div>
+          <div><dt>Closed</dt><dd>毎週月曜日</dd></div>
+          <div><dt>Tel</dt><dd><a href="tel:0300000000">03-0000-0000</a></dd></div>
+        </dl>
       </div>
       <div class="access__map reveal">
         <iframe src="https://maps.google.com/maps?q=%E4%BB%A3%E5%AE%98%E5%B1%B1%E9%A7%85&z=16&output=embed" title="地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -153,21 +150,21 @@
 
     <!-- 予約 -->
     <section class="reserve" id="reserve">
+      <p class="reserve__word">Reserve</p>
       <div class="reserve__inner">
-        <p class="label label--light">06 / Reserve</p>
-        <h2 class="title title--light">ご予約</h2>
+        <h2 class="h2">ご予約</h2>
         <p class="reserve__lead">ネット予約は24時間受け付けています。</p>
 
         <form class="form" id="reserve-form" novalidate>
           <div id="form-fields">
-            <div class="form__row"><label for="f-name">お名前<span>必須</span></label><input type="text" id="f-name" name="name" placeholder="山田 花子" required></div>
-            <div class="form__row"><label for="f-tel">電話番号<span>必須</span></label><input type="tel" id="f-tel" name="tel" placeholder="090-1234-5678" required></div>
+            <div class="form__row"><label for="f-name">お名前 *</label><input type="text" id="f-name" name="name" placeholder="山田 花子" required></div>
+            <div class="form__row"><label for="f-tel">電話番号 *</label><input type="tel" id="f-tel" name="tel" placeholder="090-1234-5678" required></div>
             <div class="form__half">
-              <div class="form__row"><label for="f-date">希望日<span>必須</span></label><input type="date" id="f-date" name="date" required></div>
-              <div class="form__row"><label for="f-time">時間<span>必須</span></label><select id="f-time" name="time" required><option value="">選択してください</option></select></div>
+              <div class="form__row"><label for="f-date">希望日 *</label><input type="date" id="f-date" name="date" required></div>
+              <div class="form__row"><label for="f-time">時間 *</label><select id="f-time" name="time" required><option value="">選択してください</option></select></div>
             </div>
             <div class="form__row">
-              <label for="f-menu">メニュー<span>必須</span></label>
+              <label for="f-menu">メニュー *</label>
               <select id="f-menu" name="menu" required>
                 <option value="">選択してください</option>
                 <option>まつげパーマ</option><option>まつげパーマ＋美容液</option>
@@ -179,7 +176,7 @@
             <div class="form__row">
               <p class="form__label">ご来店は</p>
               <div class="form__radio">
-                <label><input type="radio" name="visit" value="はじめて" checked> はじめて(¥1,000 OFF)</label>
+                <label><input type="radio" name="visit" value="はじめて" checked> はじめて(¥1,000 off)</label>
                 <label><input type="radio" name="visit" value="2回目以降"> 2回目以降</label>
               </div>
             </div>
@@ -196,7 +193,7 @@
         </form>
 
         <div class="form form--done" id="reserve-done" hidden>
-          <p class="done__mark">✓</p>
+          <p class="done__mark">Thank you.</p>
           <h3>ご予約ありがとうございます</h3>
           <p id="done-text"></p>
           <p class="done__note">※このサイトはサンプルなので、実際には予約されません。</p>
@@ -206,7 +203,7 @@
   </main>
 
   <footer class="footer">
-    <p class="logo">LIGNE<span>eyelash &amp; eyebrow</span></p>
+    <p class="footer__word">ligne</p>
     <p class="footer__note">※このサイトは架空のまつげ・眉サロンのサンプルです。店名・住所・電話番号などはすべて架空のものです。</p>
     <small>&copy; 2026 eyelash &amp; eyebrow ligne</small>
   </footer>
