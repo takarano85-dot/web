@@ -179,7 +179,8 @@ section { padding: clamp(80px, 10vw, 130px) var(--pad); }
 .free .btn--big { grid-column: 1 / -1; justify-self: center; background: var(--accent); }
 
 /* ===== 料金 ===== */
-.plans { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.plans__more { margin-top: 14px; font-size: 12.5px; color: var(--sub); font-weight: 400; }
 .plan { position: relative; display: grid; gap: 10px; align-content: start; padding: 30px 24px; background: #fff; border-radius: 24px; box-shadow: 0 18px 36px -28px rgba(27,42,65,.4); }
 .plan--pop { box-shadow: 0 0 0 2px var(--accent), 0 30px 50px -30px rgba(224,119,90,.5); }
 .plan__badge { position: absolute; top: -12px; right: 20px; padding: 2px 14px; border-radius: 999px; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; }
@@ -238,7 +239,7 @@ section { padding: clamp(80px, 10vw, 130px) var(--pad); }
 
 /* ===== タブレット ===== */
 @media (max-width: 1060px) {
-  .plans, .about__list { grid-template-columns: repeat(2, 1fr); }
+  .about__list { grid-template-columns: repeat(2, 1fr); }
   .flow__list { grid-template-columns: repeat(2, 1fr); }
 }
 
